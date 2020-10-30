@@ -28,7 +28,8 @@ class SocialeController extends Controller
             if($check)
             {
                 $data = User::where('sevice_id',$user->id)->update(['token' => $user->token, 'email_verified' => 1]);
-                Auth::loginUsingId($data->id);
+                Auth::loginUsingId($check->id);
+
             }else{
                 $_user = User::create( [
                     'username'      => $user->name ,
@@ -40,11 +41,9 @@ class SocialeController extends Controller
                 ] );
                 Auth::loginUsingId($_user->id);
             }
-
-            
             return redirect()->back() ;
         }catch (\Exception $e) {
-            return redirect(route('login/facebook'));
+            return redirect(route('redirect'));
         }
         
         

@@ -53,11 +53,9 @@ class RegisterController extends Controller
     {
        
         $check = User::where('email_key',$request->code)->where('id',$id)->first() ;
-
         if($check)
         {
             User::where('id',$id)->update(['email_key' => null, 'email_verified' => 1]);
-
             session()->flash('success' , __('site.successadduser'));
             return redirect( route('register') ) ;
         }
