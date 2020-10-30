@@ -20,10 +20,10 @@
         </ul>
       </li>
       @auth
-        <li><a href="{{route('logout')}}"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        <li><a href="{{route('logout')}}"><span class="glyphicon glyphicon-log-in"></span> {{__('site.logout')}}</a></li>
       @else
-        <li><a href="{{route('register')}}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="{{route('getLogin')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="{{route('register')}}"><span class="glyphicon glyphicon-user"></span> {{__('site.signin')}}</a></li>
+        <li><a href="{{route('getLogin')}}"><span class="glyphicon glyphicon-log-in"></span> {{__('site.login')}}</a></li>
       @endauth
       
     </ul>

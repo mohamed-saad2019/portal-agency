@@ -17,7 +17,8 @@ return[
     'email'                 => 'Email',
     'password'              => 'Password',
     'remember-me'           => 'Remember-me',
-    'signin'                => 'Sign up',
+    'signin'                => 'Sign Up',
+    'logout'                => 'Logout',
     'img'                   => 'Image',
 
     'successadduser'        => 'Success register',
