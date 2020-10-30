@@ -24,4 +24,8 @@ return [
     'login'                 => 'تسجيل دخول',
     'email_not_exists'      => 'هذا البريد غير مسجل لدينا',
     'loginfacebook'         => ' تسجيل الدخول بواسطه الفيسبوك ',
+    'confirmRegister'       => ' تأكيد التسجيل ',
+    'confirm'               => ' تأكيد ',
+    'donesendemail'         => ' تم ارسال كود التفعيل علي هذا البريد  ',
+    'errorcode'             => ' كود غير صحيح  ',
 ];

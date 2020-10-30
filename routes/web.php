@@ -18,16 +18,22 @@ if (!defined('DEFAULT_PATH')) define('DEFAULT_PATH','storage/app/public');
 
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 Route::group( ['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ] ],function(){
     
     Route::get('/', function () {
         return view('welcome');
-    })->name('index');
+    })->name('index') ;
+
     
     Route::group(['namespace' => 'Site'], function (){
         Route::get('register', 'RegisterController@register')->name('register') ;
         Route::post('singup' , 'RegisterController@singup')->name('singup') ;
+
+
+        Route::get('confirm/{id}' , 'RegisterController@getConfirm')->name('getConfirm') ; 
+
+        Route::post('setConfirm/{id}' , 'RegisterController@setConfirm')->name('setConfirm') ; 
 
        
         Route::group(['middleware' => 'guest:web'], function (){

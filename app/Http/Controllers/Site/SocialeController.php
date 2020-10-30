@@ -18,9 +18,9 @@ class SocialeController extends Controller
 
     public function handleProviderCallback(){
        
-        // $user = Socialite::driver('facebook')->stateless()->user() ;
-        // return response()->json($user);
-        return Socialite::driver('google')->stateless()->user();
+        $user = Socialite::driver('facebook')->stateless()->user() ;
+        return response()->json($user);
+        // return Socialite::driver('facebook')->stateless()->user();
         // $user->token;
     }
 
