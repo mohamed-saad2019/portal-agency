@@ -33,6 +33,6 @@ return [
     'facebook' => [
         'client_id' => '1063715440738533',
         'client_secret' => 'c8c0d81fd2b8b2afba43e24fe7c03e89',
-        'redirect' => 'http://portalagency.elmwslaty.com/login/facebook/callback',
+        'redirect' => 'https://portalagency.elmwslaty.com/login/facebook/callback',
     ],
 ];
